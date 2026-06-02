@@ -3,526 +3,327 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KONTAKT – TUR-BUD Wyszków | Tynki Maszynowe</title>
-<meta name="description" content="Skontaktuj się z firmą TUR-BUD Rafał Turek. Tynki maszynowe, malowanie agregatem, Wyszków i okolice. Tel: 514 139 964">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<title>TUR-BUD Wyszków | Tynki Maszynowe | Malowanie Agregatem</title>
+<meta name="description" content="Firma TUR-BUD Rafał Turek – tynki maszynowe, malowanie agregatem, wykończenia wnętrz. Wyszków i okolice. Tel: 514 139 964">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--or:#E8500A;--or2:#C03F08;--dk:#181818;--dk2:#222;--lt:#F4F2ED;--wh:#fff;--bd:#E0DDD6;--mu:#888}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--lt);color:var(--dk);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
 
-:root {
-  --orange: #E8500A;
-  --orange-dark: #C04008;
-  --dark: #181818;
-  --dark2: #242424;
-  --dark3: #2E2E2E;
-  --light: #F4F2ED;
-  --white: #FFFFFF;
-  --muted: #777;
-  --border: #E0DDD8;
-}
+nav{position:sticky;top:0;z-index:100;background:var(--dk);border-bottom:3px solid var(--or)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{height:44px;filter:brightness(10)}
+.nav-links{display:flex;list-style:none}
+.nav-links a{display:block;color:#aaa;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:0 14px;line-height:68px;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px}
+.nav-links a:hover{color:#fff}
+.nav-links a.active{color:var(--or);border-bottom-color:var(--or)}
+.nav-phone{color:#fff;font-size:16px;font-weight:700;white-space:nowrap}
+.nav-phone span{color:var(--or)}
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Barlow', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+.hero{position:relative;height:100vh;min-height:560px;max-height:820px;overflow:hidden;background:var(--dk)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.28}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(105deg,rgba(24,24,24,.92) 35%,rgba(24,24,24,.4) 100%)}
+.hero-cnt{position:relative;height:100%;max-width:1200px;margin:0 auto;padding:0 5%;display:flex;flex-direction:column;justify-content:center}
+.hero-tag{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+.hero-h1{font-family:'Barlow Condensed',sans-serif;font-size:82px;font-weight:900;text-transform:uppercase;color:#fff;line-height:.92;letter-spacing:-.02em;margin-bottom:24px}
+.hero-h1 em{color:var(--or);font-style:normal}
+.hero-desc{font-size:17px;color:#ccc;max-width:500px;line-height:1.7;margin-bottom:36px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-p{background:var(--or);color:#fff;padding:16px 40px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;display:inline-block;transition:background .2s}
+.btn-p:hover{background:var(--or2)}
+.btn-o{background:transparent;color:#fff;padding:15px 40px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;border:2px solid rgba(255,255,255,.35);display:inline-block;transition:border-color .2s}
+.btn-o:hover{border-color:#fff}
+.hero-stats{position:absolute;bottom:0;left:0;right:0;background:var(--or)}
+.hs-in{max-width:1200px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:20px 0;border-right:1px solid rgba(255,255,255,.25);text-align:center}
+.stat:last-child{border-right:none}
+.stat-n{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1}
+.stat-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:2px}
 
-/* ---- TOPBAR ---- */
-.topbar {
-  background: var(--dark);
-  padding: 0 6%;
-  border-bottom: 3px solid var(--orange);
-}
-.topbar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-  gap: 24px;
-}
-.logo { display: flex; align-items: center; text-decoration: none; }
-.logo img { height: 46px; filter: brightness(10); }
-.nav-links { display: flex; list-style: none; gap: 0; }
-.nav-links a {
-  display: block;
-  color: #ADADAD;
-  text-decoration: none;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 0 15px;
-  line-height: 70px;
-  transition: color .18s;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -3px;
-}
-.nav-links a:hover { color: #fff; }
-.nav-links a.active { color: var(--orange); border-bottom-color: var(--orange); }
-.topbar-phone {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--white);
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: .03em;
-  white-space: nowrap;
-}
-.topbar-phone::before {
-  content: '';
-  display: inline-block;
-  width: 20px; height: 20px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E8500A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E") no-repeat center/contain;
-}
+.section{padding:80px 5%}
+.sec{max-width:1200px;margin:0 auto}
+.s-tag{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:6px}
+.s-title{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:16px}
+.s-bar{width:52px;height:4px;background:var(--or);margin-bottom:36px}
 
-/* ---- HERO ---- */
-.hero {
-  position: relative;
-  height: 320px;
-  overflow: hidden;
-  background: var(--dark2);
-}
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  opacity: .3;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(24,24,24,.85) 40%, rgba(24,24,24,.4) 100%);
-}
-.hero-content {
-  position: relative;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.hero-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 10px;
-}
-.hero-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 72px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: .95;
-  letter-spacing: -.02em;
-}
-.hero-title span { color: var(--orange); }
-.hero-bar {
-  width: 52px; height: 4px;
-  background: var(--orange);
-  margin-top: 18px;
-}
+#ofirmie{background:var(--wh)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{width:100%;height:420px;object-fit:cover}
+.why-list{list-style:none;margin-top:28px}
+.why-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--bd)}
+.why-list li:last-child{border-bottom:none}
+.why-ico{width:34px;height:34px;background:var(--or);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:900;margin-top:2px}
+.why-t strong{display:block;font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.why-t span{font-size:13px;color:var(--mu)}
+.s-lead{font-size:15.5px;color:#555;line-height:1.75;margin-bottom:8px}
 
-/* ---- BREADCRUMB ---- */
-.breadcrumb {
-  background: var(--dark3);
-  padding: 10px 6%;
-  border-bottom: 1px solid #333;
-}
-.breadcrumb-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 12px;
-  color: #888;
-  letter-spacing: .05em;
-}
-.breadcrumb a { color: #888; text-decoration: none; }
-.breadcrumb a:hover { color: var(--orange); }
-.breadcrumb .sep { margin: 0 8px; color: #444; }
-.breadcrumb .current { color: var(--orange); font-weight: 600; }
+#uslugi{background:var(--lt)}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.srv-card{background:var(--wh);border:1px solid var(--bd);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.srv-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.srv-img{height:196px;overflow:hidden}
+.srv-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.srv-card:hover .srv-img img{transform:scale(1.05)}
+.srv-body{padding:24px}
+.srv-n{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:#e8e4dc;line-height:1;margin-bottom:8px}
+.srv-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;margin-bottom:10px}
+.srv-body p{font-size:13.5px;color:#666;line-height:1.7}
+.srv-more{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);border-bottom:1.5px solid var(--or);padding-bottom:2px}
 
-/* ---- MAIN CONTENT ---- */
-.page-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 64px 6% 80px;
-}
+#realizacje{background:var(--dk);padding:80px 5%}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:240px 240px;gap:8px;margin-top:0}
+.gi{overflow:hidden;background:var(--dk2)}
+.gi.big{grid-column:span 2;grid-row:span 2}
+.gi img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .3s,transform .4s}
+.gi:hover img{opacity:1;transform:scale(1.04)}
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 56px;
-  align-items: start;
-}
+.area-s{background:var(--or);padding:56px 5%}
+.area-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.area-title{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:900;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:14px}
+.area-sub{font-size:15px;color:rgba(255,255,255,.85);line-height:1.7}
+.area-cities{display:flex;flex-wrap:wrap;gap:8px}
+.city{background:rgba(0,0,0,.25);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 15px}
 
-/* ---- INFO COLUMN ---- */
-.info-col {}
-.section-label {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 6px;
-}
-.section-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 38px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--dark);
-  line-height: 1;
-  margin-bottom: 32px;
-}
+#kontakt{background:var(--wh)}
+.ctc-grid{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
+.ic{display:flex;background:var(--lt);border:1px solid var(--bd);margin-bottom:12px;overflow:hidden}
+.ic-bar{width:4px;flex-shrink:0;background:var(--or)}
+.ic-body{padding:18px 22px;flex:1}
+.ic-label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-bottom:4px}
+.ic-val{font-size:16px;font-weight:700;line-height:1.4}
+.ic-val a{color:var(--or);font-size:20px}
+.ic-val a:hover{text-decoration:underline}
+.dk-box{background:var(--dk);border-left:4px solid var(--or);padding:26px 28px;margin-top:20px}
+.dk-box .dbl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:8px}
+.dk-box p{font-size:13.5px;color:#bbb;line-height:1.8}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:6px}
+.field input,.field textarea{width:100%;padding:13px 16px;background:var(--lt);border:1.5px solid var(--bd);font-family:'Barlow',sans-serif;font-size:15px;color:var(--dk);outline:none;border-radius:0;-webkit-appearance:none;transition:border-color .18s}
+.field input:focus,.field textarea:focus{border-color:var(--or);background:#fff}
+.field textarea{resize:vertical;min-height:130px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-bottom:24px;padding:14px;background:var(--lt);border:1px solid var(--bd)}
+.consent input{width:16px;height:16px;flex-shrink:0;margin-top:3px;accent-color:var(--or)}
+.consent label{font-size:12px;color:#666;line-height:1.55}
+.consent strong{color:var(--or)}
+.btn-send{background:var(--or);color:#fff;border:none;padding:17px 52px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;transition:background .2s}
+.btn-send:hover{background:var(--or2)}
 
-.info-card {
-  display: flex;
-  gap: 0;
-  background: var(--white);
-  border: 1px solid var(--border);
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.info-card-accent {
-  width: 4px;
-  flex-shrink: 0;
-  background: var(--orange);
-}
-.info-card-body {
-  padding: 18px 22px;
-  flex: 1;
-}
-.info-card-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 5px;
-}
-.info-card-value {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--dark);
-  line-height: 1.4;
-}
-.info-card-value a {
-  color: var(--orange);
-  text-decoration: none;
-  font-size: 20px;
-}
-.info-card-value a:hover { text-decoration: underline; }
+footer{background:var(--dk);border-top:3px solid var(--or);padding:32px 5%}
+.foot-in{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;list-style:none}
+.foot-nav a{color:#666;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:0 14px;border-right:1px solid #2e2e2e;line-height:1;transition:color .2s}
+.foot-nav li:last-child a{border-right:none}
+.foot-nav a:hover{color:var(--or)}
+.foot-copy{font-size:12px;color:#444}
+.foot-copy a{color:#444}
 
-.area-panel {
-  margin-top: 24px;
-  background: var(--dark);
-  padding: 28px 28px 28px 32px;
-  border-left: 4px solid var(--orange);
+@media(max-width:960px){
+  .about-grid,.ctc-grid,.area-in{grid-template-columns:1fr}
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gi.big{grid-column:span 1;grid-row:span 1}
+  .hero-h1{font-size:56px}
 }
-.area-panel .area-title {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 10px;
-}
-.area-panel p {
-  font-size: 14px;
-  color: #BBB;
-  line-height: 1.8;
-}
-
-/* ---- FORM COLUMN ---- */
-.form-col {}
-.form-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 38px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--dark);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.form-subtitle {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 30px;
-}
-
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-.field { margin-bottom: 18px; }
-.field label {
-  display: block;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 7px;
-}
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 13px 16px;
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  font-family: 'Barlow', sans-serif;
-  font-size: 15px;
-  color: var(--dark);
-  outline: none;
-  border-radius: 0;
-  -webkit-appearance: none;
-  transition: border-color .18s, box-shadow .18s;
-}
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--orange);
-  box-shadow: 0 0 0 3px rgba(232,80,10,.08);
-}
-.field input::placeholder,
-.field textarea::placeholder { color: #BABABA; }
-.field textarea { resize: vertical; min-height: 140px; }
-
-.consent-row {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin-bottom: 28px;
-  padding: 16px;
-  background: #F0EEE9;
-  border: 1px solid var(--border);
-}
-.consent-row input[type=checkbox] {
-  width: 17px; height: 17px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  accent-color: var(--orange);
-  cursor: pointer;
-}
-.consent-row label {
-  font-size: 12.5px;
-  color: #666;
-  line-height: 1.55;
-  cursor: pointer;
-}
-.consent-row label strong { color: var(--orange); font-weight: 600; }
-
-.btn-send {
-  background: var(--orange);
-  color: #fff;
-  border: none;
-  padding: 18px 54px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  cursor: pointer;
-  transition: background .18s, transform .12s;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-.btn-send:hover { background: var(--orange-dark); }
-.btn-send:active { transform: scale(.98); }
-.btn-send::after { content: '→'; font-size: 22px; font-weight: 400; }
-
-/* ---- FOOTER ---- */
-footer {
-  background: var(--dark);
-  border-top: 3px solid var(--orange);
-  padding: 32px 6%;
-  margin-top: 0;
-}
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-.footer-nav { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 0; }
-.footer-nav a {
-  color: #777;
-  text-decoration: none;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 0 14px;
-  border-right: 1px solid #333;
-  line-height: 1;
-  transition: color .18s;
-}
-.footer-nav li:last-child a { border-right: none; }
-.footer-nav a:hover { color: var(--orange); }
-.footer-copy { font-size: 12px; color: #444; }
-.footer-copy a { color: #444; text-decoration: none; }
-.footer-copy a:hover { color: #666; }
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 900px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .form-row { grid-template-columns: 1fr; }
-  .hero-title { font-size: 52px; }
-}
-@media (max-width: 600px) {
-  .nav-links { display: none; }
-  .hero { height: 240px; }
-  .hero-title { font-size: 42px; }
-  .section-title, .form-title { font-size: 30px; }
-  .topbar-phone { font-size: 15px; }
+@media(max-width:640px){
+  .nav-links{display:none}
+  .srv-grid{grid-template-columns:1fr}
+  .hero-h1{font-size:42px}
+  .frow{grid-template-columns:1fr}
+  .hs-in{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.2)}
 }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<header>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <a class="logo" href="http://tynkiwyszkow.pl/">
-        <img src="http://tynkiwyszkow.pl/public/customers/308/logo_1703679374_221_325.png" alt="TUR-BUD">
-      </a>
-      <ul class="nav-links">
-        <li><a href="http://tynkiwyszkow.pl/">O firmie</a></li>
-        <li><a href="http://tynkiwyszkow.pl/tynkowanie">Tynkowanie</a></li>
-        <li><a href="http://tynkiwyszkow.pl/malowanie">Malowanie</a></li>
-        <li><a href="http://tynkiwyszkow.pl/wykonczenia">Wykończenia</a></li>
-        <li><a href="http://tynkiwyszkow.pl/realizacje">Realizacje</a></li>
-        <li><a href="http://tynkiwyszkow.pl/kontakt" class="active">Kontakt</a></li>
-      </ul>
-      <a class="topbar-phone" href="tel:+48514139964">514&nbsp;139&nbsp;964</a>
+<nav>
+  <div class="nav-in">
+    <a href="#" class="logo"><img src="http://tynkiwyszkow.pl/public/customers/308/logo_1703679374_221_325.png" alt="TUR-BUD"></a>
+    <ul class="nav-links">
+      <li><a href="#ofirmie">O firmie</a></li>
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="#realizacje">Realizacje</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a class="nav-phone" href="tel:+48514139964"><span>✆</span> 514 139 964</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img class="hero-bg" src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Realizacje TUR-BUD">
+  <div class="hero-grad"></div>
+  <div class="hero-cnt">
+    <div class="hero-tag">TUR-BUD Rafał Turek — Wyszków i okolice</div>
+    <h1 class="hero-h1">Tynki<br><em>maszynowe</em><br>&amp; malowanie</h1>
+    <p class="hero-desc">Ponad 20 lat doświadczenia w tynkach maszynowych, malowaniu agregatem i kompleksowych wykończeniach wnętrz na terenie Wyszkowa i okolic.</p>
+    <div class="hero-btns">
+      <a href="#kontakt" class="btn-p">Bezpłatna wycena</a>
+      <a href="#uslugi" class="btn-o">Nasze usługi</a>
     </div>
   </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <img class="hero-img" src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Realizacje TUR-BUD">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">TUR-BUD Rafał Turek</div>
-    <h1 class="hero-title">Skon<span>takt</span>uj<br>się z nami</h1>
-    <div class="hero-bar"></div>
+  <div class="hero-stats">
+    <div class="hs-in">
+      <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Lat doświadczenia</div></div>
+      <div class="stat"><div class="stat-n">40 km</div><div class="stat-l">Obszar działania</div></div>
+      <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Zadowolonych klientów</div></div>
+    </div>
   </div>
 </section>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <div class="breadcrumb-inner">
-    <a href="http://tynkiwyszkow.pl/">Strona główna</a>
-    <span class="sep">›</span>
-    <span class="current">Kontakt</span>
+<section class="section" id="ofirmie">
+  <div class="sec">
+    <div class="about-grid">
+      <div>
+        <img class="about-img" src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Tynki maszynowe TUR-BUD">
+      </div>
+      <div>
+        <div class="s-tag">O firmie</div>
+        <h2 class="s-title">TUR-BUD<br>Rafał Turek</h2>
+        <div class="s-bar"></div>
+        <p class="s-lead">Specjalizujemy się w wykonywaniu tynków maszynowych, korzystając z nowoczesnych agregatów. Oferujemy zarówno tynki cementowe z worka, jak i gipsowe. Dzięki ponad dwudziestoletniemu doświadczeniu zapewniamy fachowe podejście na każdym etapie.</p>
+        <ul class="why-list">
+          <li><div class="why-ico">✓</div><div class="why-t"><strong>Doświadczenie i jakość</strong><span>Ponad 20 lat na rynku, najwyższe standardy wykonania</span></div></li>
+          <li><div class="why-ico">✓</div><div class="why-t"><strong>Kompleksowa obsługa</strong><span>Hydraulika, elektryka, panele, glazura, terakota, zabudowy KG</span></div></li>
+          <li><div class="why-ico">✓</div><div class="why-t"><strong>Zaufani podwykonawcy</strong><span>Współpracujemy ze sprawdzonymi specjalistami</span></div></li>
+          <li><div class="why-ico">✓</div><div class="why-t"><strong>Indywidualne podejście</strong><span>Każdy projekt z pełnym zaangażowaniem i dbałością o detale</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="uslugi">
+  <div class="sec">
+    <div class="s-tag">Co oferujemy</div>
+    <h2 class="s-title">Nasze usługi</h2>
+    <div class="s-bar"></div>
+    <div class="srv-grid">
+      <div class="srv-card">
+        <div class="srv-img"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Tynkowanie"></div>
+        <div class="srv-body">
+          <div class="srv-n">01</div>
+          <div class="srv-name">Tynkowanie</div>
+          <p>Tynki maszynowe cementowe i gipsowe wykonywane nowoczesnym agregatem. Szybko, równo i solidnie.</p>
+          <span class="srv-more">Dowiedz się więcej →</span>
+        </div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-img"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Malowanie"></div>
+        <div class="srv-body">
+          <div class="srv-n">02</div>
+          <div class="srv-name">Malowanie agregatem</div>
+          <p>Profesjonalne malowanie wnętrz agregatem — równomierne krycie, krótki czas realizacji, trwały efekt.</p>
+          <span class="srv-more">Dowiedz się więcej →</span>
+        </div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-img"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Wykończenia"></div>
+        <div class="srv-body">
+          <div class="srv-n">03</div>
+          <div class="srv-name">Wykończenia wnętrz</div>
+          <p>Adaptacja poddaszy, glazura, terakota, zabudowy KG, panele, elektryka i hydraulika — wszystko kompleksowo.</p>
+          <span class="srv-more">Dowiedz się więcej →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realizacje" style="background:var(--dk);padding:80px 5%">
+  <div class="sec">
+    <div class="s-tag">Portfolio</div>
+    <h2 class="s-title" style="color:#fff">Nasze realizacje</h2>
+    <div class="s-bar"></div>
+    <div class="gallery">
+      <div class="gi big"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Realizacja 1"></div>
+      <div class="gi"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Realizacja 2"></div>
+      <div class="gi"><img src="http://tynkiwyszkow.pl/public/customers/308/pages_slider/big/4127.jpg" alt="Realizacja 3"></div>
+    </div>
+  </div>
+</section>
+
+<div class="area-s">
+  <div class="area-in">
+    <div>
+      <h2 class="area-title">Wyszków<br>i okolice</h2>
+      <p class="area-sub">Działamy w promieniu około 40 km od Wyszkowa. Skontaktuj się z nami niezależnie od lokalizacji w województwie mazowieckim.</p>
+    </div>
+    <div class="area-cities">
+      <span class="city">Wyszków</span>
+      <span class="city">Ostrów Maz.</span>
+      <span class="city">Maków Maz.</span>
+      <span class="city">Pułtusk</span>
+      <span class="city">Ostrołęka</span>
+      <span class="city">Ciechanów</span>
+      <span class="city">i okolice...</span>
+    </div>
   </div>
 </div>
 
-<!-- MAIN -->
-<main class="page-main">
-  <div class="contact-grid">
-
-    <!-- KOLUMNA LEWA: DANE -->
-    <div class="info-col">
-      <div class="section-label">Dane kontaktowe</div>
-      <h2 class="section-title">Jesteśmy do dyspozycji</h2>
-
-      <div class="info-card">
-        <div class="info-card-accent"></div>
-        <div class="info-card-body">
-          <div class="info-card-label">Firma</div>
-          <div class="info-card-value">TUR-BUD Rafał Turek</div>
+<section class="section" id="kontakt">
+  <div class="sec">
+    <div class="ctc-grid">
+      <div>
+        <div class="s-tag">Dane kontaktowe</div>
+        <h2 class="s-title">Skontaktuj<br>się z nami</h2>
+        <div class="s-bar"></div>
+        <div class="ic"><div class="ic-bar"></div><div class="ic-body"><div class="ic-label">Firma</div><div class="ic-val">TUR-BUD Rafał Turek</div></div></div>
+        <div class="ic"><div class="ic-bar"></div><div class="ic-body"><div class="ic-label">Adres</div><div class="ic-val">Stare Kozłowo 30<br>07-206 Somianka</div></div></div>
+        <div class="ic"><div class="ic-bar"></div><div class="ic-body"><div class="ic-label">Telefon</div><div class="ic-val"><a href="tel:+48514139964">514 139 964</a></div></div></div>
+        <div class="dk-box">
+          <div class="dbl">Obszar działania</div>
+          <p>Wyszków i okolice w promieniu ~40 km — Ostrów Mazowiecka, Maków Mazowiecki, Pułtusk, Ostrołęka, Ciechanów i inne.</p>
         </div>
       </div>
-
-      <div class="info-card">
-        <div class="info-card-accent"></div>
-        <div class="info-card-body">
-          <div class="info-card-label">Adres</div>
-          <div class="info-card-value">Stare Kozłowo 30<br>07-206 Somianka</div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-card-accent"></div>
-        <div class="info-card-body">
-          <div class="info-card-label">Telefon</div>
-          <div class="info-card-value"><a href="tel:+48514139964">514 139 964</a></div>
-        </div>
-      </div>
-
-      <div class="area-panel">
-        <div class="area-title">Obszar działania</div>
-        <p>Wyszków i okolice w promieniu około 40 km — Ostrów Mazowiecka, Maków Mazowiecki, Pułtusk, Ostrołęka, Ciechanów i inne miejscowości województwa mazowieckiego.</p>
+      <div>
+        <div class="s-tag">Formularz kontaktowy</div>
+        <h2 class="s-title">Wyślij<br>wiadomość</h2>
+        <div class="s-bar"></div>
+        <form>
+          <div class="frow">
+            <div class="field"><label for="imie">Imię i nazwisko</label><input type="text" id="imie" placeholder="Jan Kowalski" required></div>
+            <div class="field"><label for="tel">Telefon</label><input type="tel" id="tel" placeholder="514 000 000"></div>
+          </div>
+          <div class="field"><label for="email">E-mail</label><input type="email" id="email" placeholder="jan@example.pl"></div>
+          <div class="field"><label for="msg">Wiadomość</label><textarea id="msg" placeholder="Opisz zakres prac, lokalizację i termin..."></textarea></div>
+          <div class="consent">
+            <input type="checkbox" id="rodo" required>
+            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie. <strong>(*) Zgoda wymagana</strong></label>
+          </div>
+          <button class="btn-send" type="submit">Wyślij wiadomość →</button>
+        </form>
       </div>
     </div>
-
-    <!-- KOLUMNA PRAWA: FORMULARZ -->
-    <div class="form-col">
-      <div class="section-label">Formularz kontaktowy</div>
-      <h2 class="form-title">Wyślij wiadomość</h2>
-      <p class="form-subtitle">Odpiszemy najszybciej jak to możliwe.</p>
-
-      <form action="#" method="post">
-        <div class="form-row">
-          <div class="field">
-            <label for="imie">Imię i nazwisko</label>
-            <input type="text" id="imie" name="name" placeholder="Jan Kowalski" required>
-          </div>
-          <div class="field">
-            <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" name="phone" placeholder="514 000 000">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email">Adres e-mail</label>
-          <input type="email" id="email" name="email" placeholder="jan@example.pl">
-        </div>
-
-        <div class="field">
-          <label for="wiadomosc">Wiadomość</label>
-          <textarea id="wiadomosc" name="message" placeholder="Opisz swoje zapytanie — rodzaj prac, lokalizację, przybliżony termin..."></textarea>
-        </div>
-
-        <div class="consent-row">
-          <input type="checkbox" id="rodo" name="rodo" required>
-          <label for="rodo">
-            Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu udzielenia odpowiedzi na moje zapytanie. Podanie danych jest dobrowolne, ale niezbędne do udzielenia odpowiedzi na przesłane zapytanie.
-            <strong>(*) Zgoda wymagana</strong>
-          </label>
-        </div>
-
-        <button class="btn-send" type="submit">Wyślij wiadomość</button>
-      </form>
-    </div>
-
   </div>
-</main>
+</section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <ul class="footer-nav">
-      <li><a href="http://tynkiwyszkow.pl/">O firmie</a></li>
-      <li><a href="http://tynkiwyszkow.pl/tynkowanie">Tynkowanie</a></li>
-      <li><a href="http://tynkiwyszkow.pl/malowanie">Malowanie</a></li>
-      <li><a href="http://tynkiwyszkow.pl/wykonczenia">Wykończenia</a></li>
-      <li><a href="http://tynkiwyszkow.pl/realizacje">Realizacje</a></li>
-      <li><a href="http://tynkiwyszkow.pl/kontakt">Kontakt</a></li>
+  <div class="foot-in">
+    <ul class="foot-nav">
+      <li><a href="#ofirmie">O firmie</a></li>
+      <li><a href="#uslugi">Tynkowanie</a></li>
+      <li><a href="#uslugi">Malowanie</a></li>
+      <li><a href="#uslugi">Wykończenia</a></li>
+      <li><a href="#realizacje">Realizacje</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
     </ul>
-    <p class="footer-copy">projekt by <a href="https://www.100firm.eu/">100firm</a></p>
+    <p class="foot-copy">© 2024 TUR-BUD Rafał Turek &nbsp;|&nbsp; projekt by <a href="https://www.100firm.eu/">100firm</a></p>
   </div>
 </footer>
 
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#'+cur); });
+});
+</script>
 </body>
 </html>
